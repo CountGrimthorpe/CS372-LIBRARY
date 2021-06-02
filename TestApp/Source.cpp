@@ -3,27 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include "assignment1.h"
 
 
-class List
-{
-private:
-    int array[10];
-public:
-    void setIndex(int num, int index);
-    int getIndex(int index);
-
-};
-
-void List::setIndex(int num, int index)
-{
-    array[index] = num;
-}
-
-int List::getIndex(int index)
-{
-    return(array[index]);
-}
 
 void problem1();
 void problem2();
