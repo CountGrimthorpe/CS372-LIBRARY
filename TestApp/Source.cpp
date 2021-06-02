@@ -13,10 +13,14 @@ void problem3();
 std::string helper_problem3();
 int main()
 {
+    problem1();
+    std::cout << "Problem 1 output " << "\n\n";
 
-
+    problem2();
+    std::cout << "Problem 2 output " << "\n\n";
 
     problem3();
+    std::cout << "\nProblem 3 output " << "\n\n";
 
     return 0;
 }
@@ -38,11 +42,7 @@ void problem1()
 
     List* second_pointer = pointer_name;
 
-    for (int i = 0; i < 10; i++)
-    {
-        std::cout << second_pointer->getIndex(i) << "\n";
-    }
-
+   
 
     delete[] pointer_name;
 
