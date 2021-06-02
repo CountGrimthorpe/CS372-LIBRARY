@@ -2,11 +2,13 @@
 //
 
 #include <iostream>
+#include <string>
+
 
 class List
 {
 private:
-    int array[5];
+    int array[10];
 public:
     void setIndex(int num, int index);
     int getIndex(int index);
@@ -23,17 +25,102 @@ int List::getIndex(int index)
     return(array[index]);
 }
 
-
+void problem1();
+void problem2();
+void problem3();
+std::string helper_problem3();
 int main()
 {
-    List ary;
-    ary.setIndex(13, 0);
-    std::cout << ary.getIndex(0);
+
+
+
+    problem3();
 
     return 0;
 }
 
+void problem1()
+{
+    List* pointer_name = NULL;
 
+    pointer_name = new List;
+
+    pointer_name->setIndex(81, 0);
+
+    for (int i = 0; i < 10; i++)
+    {
+        pointer_name->setIndex(i * i, i);
+    }
+
+
+
+    List* second_pointer = pointer_name;
+
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << second_pointer->getIndex(i) << "\n";
+    }
+
+
+    delete[] pointer_name;
+
+
+
+    for (int i = 0; i < 10; i++)
+    {
+        std::cout << second_pointer->getIndex(i) << "\n";
+    }
+}
+
+void problem2()
+{
+    List* pointer_name = NULL;
+
+    pointer_name = new List;
+
+    pointer_name->setIndex(81, 0);
+
+    for (int i = 0; i < 10; i++)
+    {
+        pointer_name->setIndex(i * i, i);
+    }
+
+
+
+    List* second_pointer = pointer_name;
+
+
+    delete pointer_name;
+
+
+    std::cout << second_pointer << "\n";
+    for (int i = 0; i < 10; i++)
+    {
+
+        std::cout << second_pointer->getIndex(i) << "\n";
+    }
+}
+
+void problem3()
+{
+    std::string to_print = helper_problem3();
+    std::cout << to_print;
+}
+
+//I think I'm not understaning somehing in the instructions for this one.  Since I don't think I'm supposed to be getting the string back with no problems
+std::string helper_problem3()
+{
+    std::string quote = "That's no moon!";
+
+
+    std::string* first_string_ptr = &quote;
+
+    std::string* second_string_ptr = new std::string;
+
+    second_string_ptr = first_string_ptr;
+
+    return(*second_string_ptr);
+}
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
