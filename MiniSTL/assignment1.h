@@ -1,5 +1,5 @@
 #pragma once
-class List
+class ary
 {
 private:
     int array[10];
@@ -9,12 +9,12 @@ public:
 
 };
 
-void List::setIndex(int num, int index)
+void ary::setIndex(int num, int index)
 {
     array[index] = num;
 }
 
-int List::getIndex(int index)
+int ary::getIndex(int index)
 {
     return(array[index]);
 }

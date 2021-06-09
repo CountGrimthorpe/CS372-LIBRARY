@@ -6,7 +6,6 @@
 #include "assignment1.h"
 
 
-
 void problem1();
 void problem2();
 void problem3();
@@ -27,9 +26,9 @@ int main()
 
 void problem1()
 {
-    List* pointer_name = NULL;
+    ary* pointer_name = NULL;
 
-    pointer_name = new List;
+    pointer_name = new ary;
 
     pointer_name->setIndex(81, 0);
 
@@ -40,7 +39,7 @@ void problem1()
 
 
 
-    List* second_pointer = pointer_name;
+    ary* second_pointer = pointer_name;
 
    
 
@@ -56,9 +55,9 @@ void problem1()
 
 void problem2()
 {
-    List* pointer_name = NULL;
+    ary* pointer_name = NULL;
 
-    pointer_name = new List;
+    pointer_name = new ary;
 
     pointer_name->setIndex(81, 0);
 
@@ -69,7 +68,7 @@ void problem2()
 
 
 
-    List* second_pointer = pointer_name;
+    ary* second_pointer = pointer_name;
 
 
     delete pointer_name;
