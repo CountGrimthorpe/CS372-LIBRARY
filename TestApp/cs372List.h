@@ -20,6 +20,7 @@ private:
     }
     void deleteListContents() {
         Node* current = head;
+        Node* temp;
         while (current != nullptr) {
             temp = current.next;
             delete current;
