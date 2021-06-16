@@ -22,7 +22,7 @@ private:
         Node* current = head;
         Node* temp;
         while (current != nullptr) {
-            temp = current.next;
+            temp = current -> next;
             delete current;
             current = temp;
         }
