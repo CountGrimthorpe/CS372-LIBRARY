@@ -5,6 +5,7 @@
 #include "cs372List.h"
 #include "cs372Queue.h"
 #include "cs372vector.h"
+#include <stack>
 
 using namespace std;
 
