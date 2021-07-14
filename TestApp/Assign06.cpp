@@ -2,55 +2,42 @@
 //
 
 #include <iostream>
-#include "cs372List.h"
-#include "cs372Queue.h"
-#include "cs372vector.h"
-#include <stack>
 
 using namespace std;
 
 
-int main()
+template <typename T>
+int binarySearch(T arr[], int size, T value)
 {
-  
-    List<int> taskNum;
-    
 
+    int first = 0;
+    int last = size - 1;
+    int middle = (first + last) / 2;
+    int count = 0;
 
-
-
-    int choice = 0;
-
-    do {
-    
-    std::cout << "1)  Task Number\n";
-    std::cout << "2)  U/D\n";
-    std::cout << "3)  Task Description\n";
-    std::cin >> choice;
-
-    
-
-    
-        switch (choice)
-        {
-        case 1:
-            std::cout << "TaskNumber\n";
-            break;
-        case 2:
-            std::cout << "U/D\n";
-            break;
-        case 3:
-            std::cout << "TaskDescription\n";
-            break;
-        default:
-            std::cout << "Please enter a valid choice\n\n";
+    while (first <= last) {
+        count++;
+        if (arr[middle] < value)
+            first = middle + 1;
+        else if (arr[middle] == value) {
+            return(count);
             break;
         }
-    } while (choice != 1 && choice != 2 && choice !=3);
+        else
+            last = middle - 1;
+
+        middle = (first + last) / 2;
+    }
+
+}
+int main()
+{
 
 
     return 0;
 }
+
+
 
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
